@@ -104,7 +104,7 @@ app.get("/signup", (req, res) => {
   res.render("signup")
 })
 app.get("/tracker", (req, res) => { 
-  res.render("tracker")
+  res.render("tracker",{message:""})
 })
 
 
