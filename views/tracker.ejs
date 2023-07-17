@@ -1,0 +1,77 @@
+
+<%- include("./partials/header") %>
+<nav>
+      <ul id="menu" class="invisible">
+        <li>
+          <a class="sub1" href="#">Sending</a>
+          <div class="submenu1">
+            <ul id="submenu1">
+              <div>
+                <h4 class="submenu-item">Tools</h4>
+                <div class="submenu-list">
+                  <a class="submenu-item-link" href="/click-and-drop">Click & Drop</a>
+                  <a class="submenu-item-link" href="/buy-postage">Buy postage online</a>
+                  <a class="submenu-item-link" href="/return-item">Return an item</a>
+                  <a class="submenu-item-link" href="/find-postcode">Find a postcode</a>
+                </div>
+              </div>
+              <div>
+                <h4 class="submenu-item">UK Parcels</h4>
+                <div class="submenu-list">
+                  <a class="submenu-item-link" href="/" >Special Delivery Guaranteed by 9am</a>
+                  <a class="submenu-item-link" href="/">Special Delivery Guaranteed by 1pm</a>
+                  <a class="submenu-item-link" href="/">Royal Mail Tracked 24</a>
+                  <a class="submenu-item-link" href="/">Royal Mail Tracked 48</a>
+                </div>
+              </div>
+              <div>
+                <h4 class="submenu-item">International</h4>
+                <div class="submenu-list">
+                  <a class="submenu-item-link" href="/">Special Delivery Guaranteed by 9am</a>
+                  <a class="submenu-item-link" href="/">Special Delivery Guaranteed by 1pm</a>
+                  <a class="submenu-item-link" href="/">Royal Mail Tracked 24</a>
+                  <a class="submenu-item-link" href="/">Royal Mail Tracked 48</a>
+                </div>
+              </div>
+            </ul>
+
+            <!-- <ul>
+              <li class="submenu-item">
+                UK Parcels
+                <ul class="nested-submenu">
+                  <li>Special Delivery Guaranteed by 9am</li>
+                  <li>Special Delivery Guaranteed by 1pm</li>
+                  <li>Royal Mail Tracked 24</li>
+                  <li>Royal Mail Tracked 48</li>
+                </ul>
+              </li>
+            </ul>
+            <ul>
+              <li class="submenu-item">
+                International
+                <ul class="nested-submenu">
+                  <li>International Tracked & Signed</li>
+                  <li>International Tracked</li>
+                  <li>International Standard</li>
+                  <li>Country customs and restrictions</li>
+                </ul>
+              </li>
+            </ul> -->
+          </div>
+        </li>
+        <li><a href="#">Track and Manage</a></li>
+        <li><a href="#">Stamp and Supplies</a></li>
+        <li><a href="#">Health</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </nav>
+<div class="tracker">
+    <%- include("./partials/tracker-card") %>
+    <div class="track-details">
+        <h1>Your Package Details</h1>
+        <h2 id="order_number"></h2>
+        <h2 id="details"></h2>
+    </div>
+</div>
+
+<%- include("./partials/footer") %>
