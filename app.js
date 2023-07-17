@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+require("dotenv").config();
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
 app.use(express.static(__dirname + "/public"));
@@ -176,7 +177,15 @@ app.post("/get-postcode", function (req, res) {
         }
 }
 async function scrapePostCode(url) {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    args: [
+      "--disable-setuid-sandbox",
+      "--no-sandbox",
+      "--single-process",
+      "--no-zygote"
+    ],
+    executablePath: process.env.NODE_ENV === "production" ? process.env.PUPPETEER_EXECUATBLE_PATH : puppeteer.executablePath()
+  });
   const page = await browser.newPage();
 
   try {
