@@ -177,7 +177,9 @@ nav {
  .button:hover {
   background: #58b2ee;
 }
-
+.tracker #result{
+  display:none;
+}
 .container {
   max-width: 1170px;
   margin: auto;
