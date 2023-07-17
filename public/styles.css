@@ -450,6 +450,9 @@ color: green;}
 h2 a{
   color: black;
 }
+.tracker #result{
+  display: none;
+}
 .postcode-card h4{
   color: black;
   font-size: 2rem;
