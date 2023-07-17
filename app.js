@@ -213,6 +213,6 @@ getPostalCode(locationName)
         console.error('Error:', error);
     })
 })
-app.listen(3000, (req, res) => {
+app.listen(process.env.PORT, (req, res) => {
   console.log("Server started on Port 3000")
 })
