@@ -62,7 +62,7 @@ passport.use(
     {
       clientID: "784226573040-v2dv2chnvus1ilg2sssp571gviapvvjm.apps.googleusercontent.com",
       clientSecret: "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",
-      callbackURL: "https://lizzy-epost.onrender.com//auth/google/loggedIn",
+      callbackURL: "https://lizzy-epost.onrender.com/auth/google/loggedIn",
       userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     },
     async function (accessToken, refreshToken, profile, cb) {
@@ -222,6 +222,6 @@ getPostalCode(locationName)
         console.error('Error:', error);
     })
 })
-app.listen(process.env.PORT,"0.0.0.0", (req, res) => {
+app.listen(process.env.PORT||3000,"0.0.0.0", (req, res) => {
   console.log("Server started on Port 3000")
 })
