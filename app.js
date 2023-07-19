@@ -62,7 +62,7 @@ passport.use(
     {
       clientID: "784226573040-v2dv2chnvus1ilg2sssp571gviapvvjm.apps.googleusercontent.com",
       clientSecret: "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",
-      callbackURL: "http://localhost:3000/auth/google/loggedIn",
+      callbackURL: "https://lizzy-epost.onrender.com//auth/google/loggedIn",
       userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     },
     async function (accessToken, refreshToken, profile, cb) {
