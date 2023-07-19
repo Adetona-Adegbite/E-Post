@@ -28,7 +28,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://adetona67:Ss32022..@e-post.hnzgosl.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://"+procees.env.INFO+"@e-post.hnzgosl.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true });
 
 const userSchema = new mongoose.Schema({
   email: String,
@@ -61,7 +61,7 @@ passport.use(
   new GoogleStrategy(
     {
       clientID: "784226573040-v2dv2chnvus1ilg2sssp571gviapvvjm.apps.googleusercontent.com",
-      clientSecret: "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",
+      clientSecret: process.env.SECRET,
       callbackURL: "https://lizzy-epost.onrender.com/auth/google/loggedIn",
       userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     },
@@ -154,10 +154,10 @@ app.get("/get-postcode", function (req, res) {
 })
 app.post("/get-postcode", function (req, res) {
   async function getPostalCode(locationName) {
-    const apiKey = 'AIzaSyAI-S_ISkvDfCXF3XdXUBm9WJfqdqoh5ZE';
+    const apiKey = process.env.APIKEY ;
     const encodedLocationName = encodeURIComponent(locationName);
     console.log(encodedLocationName)
-    const geocodingEndpoint = 'https://maps.googleapis.com/maps/api/geocode/json?address='+encodedLocationName+'&key=AIzaSyAI-S_ISkvDfCXF3XdXUBm9WJfqdqoh5ZE'
+    const geocodingEndpoint = 'https://maps.googleapis.com/maps/api/geocode/json?address='+encodedLocationName+'&key='+apiKey
     try {
         const response = await axios.get(geocodingEndpoint)
 
